@@ -10,17 +10,17 @@ const bookingSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    roomType: {
-        type: String,
-        required: true
-    },
     phoneNo: {
         type: Number,
         required: true
     },
-    date: {
+    checkInDate: {
         type: Date,
-        default: Date.now
+        required: true
+    },
+    checkOutDate: {
+        type: Date,
+        required: true
     },
     noOfRooms: {
         type: Number,
