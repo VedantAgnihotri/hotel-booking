@@ -1,0 +1,14 @@
+[
+	{
+  		"type": "AC",
+  		"maxcount": 3,
+  		"rentPerDay": 300,
+		"currentBoookings": [] 
+	},
+	{
+  		"type": "Non-AC",
+  		"maxcount": 3,
+  		"rentPerDay": 200,
+		"currentBoookings": [] 
+	}
+]
