@@ -7,14 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/92fed7f738.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <link rel="stylesheet" href="style.css">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
 
 </head>
 <body class="bg-gray-900">
     
 
-<form class="max-w-sm mx-auto mt-10" method="post" action="/">
+<form class="max-w-sm mx-auto mt-10" method="post" action="/booking">
     <div class="mb-5">
       <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
       <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Name" required />
@@ -29,21 +29,22 @@
         <label for="phone_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Phone Number</label>
         <input type="tel" name="phoneNo" id="phone_no" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Phone Number" required />
       </div>
-
       <div class="mb-5">
         <label for="checkin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Check In Date</label>
         <input type="date" name="checkInDate" id="checkin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-      </div>
+    </div>
 
-      <div class="mb-5">
+    <div class="mb-5">
         <label for="checkout" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Check Out Date</label>
         <input type="date" name="checkOutDate" id="checkout" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-      </div>
+    </div>
+      
 
       <div class="mb-5">
         <label for="norooms" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Number of Rooms</label>
         <input type="number" name="noOfRooms" id="noroom" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Number of Rooms" required />
       </div>
+      
 
     <button type="submit" name="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
   </form>

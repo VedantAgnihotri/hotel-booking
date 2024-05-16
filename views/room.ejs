@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/checkAvailability">
+        <div class="mb-5">
+            <label for="checkin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Check In Date</label>
+            <input type="date" name="checkInDate" id="checkin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+
+        <div class="mb-5">
+            <label for="checkout" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Check Out Date</label>
+            <input type="date" name="checkOutDate" id="checkout" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <button>Check</button>
+    </form>
+    <div class="mb-5">
+        <label for="room" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Available Rooms</label>
+      
+    </div>
+</body>
+</html>
