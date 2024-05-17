@@ -10,23 +10,25 @@ async function getAvailableRooms(checkInDate, checkOutDate) {
         console.log("Check-in Date:", checkIn);
         console.log("Check-out Date:", checkOut);
 
-        // Find bookings that overlap with the specified date range
         const bookingsWithinRange = await bookingModel.find({
             $or: [
-                { checkInDate: { $lte: checkOut }, checkOutDate: { $gte: checkIn } }, // Check for overlapping bookings
-                { checkInDate: { $gte: checkIn, $lte: checkOut } }, // Check for bookings that start within the range
-                { checkOutDate: { $gte: checkIn, $lte: checkOut } } // Check for bookings that end within the range
+                { checkInDate: { $lte: checkOut }, checkOutDate: { $gte: checkIn } }, 
+                { checkInDate: { $gte: checkIn, $lte: checkOut } }, 
+                { checkOutDate: { $gte: checkIn, $lte: checkOut } } 
             ]
         });
 
-        console.log("Bookings within range:", bookingsWithinRange);
+        console.log("Bookings within range:", bookingsWithinRange); //remove during deployment
 
         const bookedRoomIds = bookingsWithinRange.map(booking => booking.noOfRooms);
 
-        console.log("Booked Room IDs:", bookedRoomIds);
-        const bookedRoomsCount = bookedRoomIds.length;
+        console.log("Booked Room IDs:", bookedRoomIds); //remove during deployment
 
-        // Calculate the number of available rooms
+        let bookedRoomsCount = 0
+        for (let i = 0; i < bookedRoomIds.length; i++) {
+            bookedRoomsCount += bookedRoomIds[i];
+        }
+        
         const totalRooms = 25;
         const availableRooms = totalRooms - bookedRoomsCount;
 
