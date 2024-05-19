@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/checkAvailability">
+        <div class="mb-5">
+            <label for="checkin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Check In Date</label>
+            <input type="date" name="checkInDate" id="checkin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+
+        <div class="mb-5">
+            <label for="checkout" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Check Out Date</label>
+            <input type="date" name="checkOutDate" id="checkout" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+        </div>
+        <button>Check</button>
+    </form>
+    <div class="mb-5">
+        <label for="room" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Available Rooms</label>
+      
+    </div>
+    
+    <footer class="bg-[#1c1c1c] mt-[150px]">
+        <div class="mx-auto w-full max-w-screen-xl p-3 lg:py-8">
+            <div class="md:flex justify-center md:justify-between">
+                <div class="ml-5">
+                    <a href="#" class="flex items-center">
+                        <img src="" class="h-60" />
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-5 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Nav Links</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="/booking" class="hover:underline">Book your room</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline text-sm md:text-normal">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-center">
+                <span class="text-[11px] md:text-sm text-gray-500 sm:text-center dark:text-gray-400">Made by <a
+                        class="hover:underline font-semibold" href="https://ex6nix-developers.vercel.app/"
+                        target="_blank">ex6nix Developers</a>
+            </div>
+        </div>
+            
+    </footer>
+</body>
+</html>

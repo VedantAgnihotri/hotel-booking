@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+</head>
+<body>
+    <div>
+        
+        <%bookingData.forEach(function(Data){ %>
+            <p><%=Data.name%></p>
+            <p><%=Data.age%></p>
+            <p><%=Data.phoneNo%></p>
+            <p><%=Data.checkInDate%></p>
+            <p><%=Data.checkOutDate%></p>
+            <p><%=Data.noOfRooms%></p>
+        <% }) %>
+
+
+    </div>
+</body>
+</html>

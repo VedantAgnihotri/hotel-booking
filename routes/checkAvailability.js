@@ -41,7 +41,7 @@ async function getAvailableRooms(checkInDate, checkOutDate) {
 };
 
 router.get("/", async(req, res)=>{
-    res.render("room")
+    res.render("AvailableRoom")
 });
 
 router.post("/checkAvailability", async (req, res)=>{
