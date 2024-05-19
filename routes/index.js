@@ -50,8 +50,8 @@ router.post("/booking", async (req, res) => {
     );
 
   res.redirect("/confirmation/" + bookingOfRoom._id);
-  //const link = 'https://wa.me/919899622214?text=Name:'+name+'%0A'+'Age:'+age+'%0A'+"Phone Number:"+phoneNo+"%0A"+"Check in Date:"+checkInDate+"%0A"+"Check-out Date:"+checkOutDate+"%0A"+"Number of Rooms:"+noOfRooms;
-  //res.redirect(link);
+  const link = 'https://wa.me/919899622214?text=Name:'+name+'%0A'+'Age:'+age+'%0A'+"Phone Number:"+phoneNo+"%0A"+"Check in Date:"+checkInDate+"%0A"+"Check-out Date:"+checkOutDate+"%0A"+"Number of Rooms:"+noOfRooms;
+  res.redirect(link);
 });
 
 router.get("/confirmation/:id", async (req, res) => {
