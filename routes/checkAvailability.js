@@ -18,11 +18,8 @@ async function getAvailableRooms(checkInDate, checkOutDate) {
             ]
         });
 
-        console.log("Bookings within range:", bookingsWithinRange); //remove during deployment
 
         const bookedRoomIds = bookingsWithinRange.map(booking => booking.noOfRooms);
-
-        console.log("Booked Room IDs:", bookedRoomIds); //remove during deployment
 
         let bookedRoomsCount = 0
         for (let i = 0; i < bookedRoomIds.length; i++) {
@@ -46,8 +43,7 @@ router.get("/", async(req, res)=>{
 
 router.post("/checkAvailability", async (req, res)=>{
     const availableRooms = await getAvailableRooms(req.body.checkInDate, req.body.checkOutDate); 
-    //res.render("room", { availableRooms });
-    console.log(availableRooms);
+    res.render("room", { "availableRooms": availableRooms });
 });
 
 module.exports = router;

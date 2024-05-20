@@ -1,6 +1,5 @@
 var express = require("express");
 var router = express.Router();
-const emailjs = import("emailjs")
 const bookingModel = require("../models/booking");
 const roomsModel = require("../models/rooms");
 
@@ -26,30 +25,6 @@ router.post("/booking", async (req, res) => {
     { new: true }
   );
 
-  const templateParams = {
-    name: bookingOfRoom.name,
-    age: bookingOfRoom.age,
-    phoneNo: bookingOfRoom.phoneNo,
-    checkOutDate: bookingOfRoom.checkOutDate,
-    checkOutDate: bookingOfRoom.checkOutDate,
-    noOfRooms: bookingOfRoom.noOfRooms
-  };
-
-  
-  emailjs.send("service_6csr6ul", "template_k8lqbos", templateParams, {
-      publicKey: "lHLUIDEgLJ8_QNjvU",
-      privateKey: "y0rjAY-OmnZrC7DnDikax",
-    })
-    .then(
-      (response) => {
-        console.log("SUCCESS!", response.status, response.text);
-      },
-      (err) => {
-        console.log("FAILED...", err);
-      }
-    );
-
-  res.redirect("/confirmation/" + bookingOfRoom._id);
   const link = 'https://wa.me/919899622214?text=Name:'+name+'%0A'+'Age:'+age+'%0A'+"Phone Number:"+phoneNo+"%0A"+"Check in Date:"+checkInDate+"%0A"+"Check-out Date:"+checkOutDate+"%0A"+"Number of Rooms:"+noOfRooms;
   res.redirect(link);
 });
