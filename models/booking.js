@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/hotel").then(console.log("DB connected"));
+mongoose.connect("mongodb+srv://ex6ticdev:ex6ticdev@cluster0.7h8xmhx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(console.log("DB connected"));
 
 const bookingSchema = new mongoose.Schema({
     name: {

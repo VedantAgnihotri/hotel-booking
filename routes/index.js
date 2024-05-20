@@ -1,8 +1,8 @@
 var express = require("express");
 var router = express.Router();
 const emailjs = import("emailjs")
-const bookingModel = require("C:/Users/vedant agnihotri/Desktop/Code/github desktop/hotel-booking/models/booking");
-const roomsModel = require("C:/Users/vedant agnihotri/Desktop/Code/github desktop/hotel-booking/models/rooms");
+const bookingModel = require("../models/booking");
+const roomsModel = require("../models/rooms");
 
 router.get("/booking", (req, res) => {
   res.render("booking");
