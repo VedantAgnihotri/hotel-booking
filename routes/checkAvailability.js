@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const bookingModel = require("C:/Users/vedant agnihotri/Desktop/Code/github desktop/hotel-booking/models/booking");
+const bookingModel = require("../models/booking");
 
 async function getAvailableRooms(checkInDate, checkOutDate) {
     try {
