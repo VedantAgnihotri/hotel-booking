@@ -43,7 +43,7 @@ router.get("/", async(req, res)=>{
 
 router.post("/checkAvailability", async (req, res)=>{
     const availableRooms = await getAvailableRooms(req.body.checkInDate, req.body.checkOutDate); 
-    res.render("room", { "availableRooms": availableRooms });
+    res.render("room", { availableRooms });
 });
 
 module.exports = router;
