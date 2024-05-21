@@ -29,9 +29,5 @@ router.post("/booking", async (req, res) => {
   res.redirect(link);
 });
 
-router.get("/confirmation/:id", async (req, res) => {
-  const bookingData = await bookingModel.findById(req.params.id);
-  res.render("confirm", { bookingData: [bookingData] });
-});
 
 module.exports = router;

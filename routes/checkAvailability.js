@@ -38,12 +38,13 @@ async function getAvailableRooms(checkInDate, checkOutDate) {
 };
 
 router.get("/", async(req, res)=>{
-    res.render("AvailableRoom")
+   let availableRooms = "dd";
+    res.render("AvailableRoom", {availableRooms})
 });
 
 router.post("/checkAvailability", async (req, res)=>{
-    const availableRooms = await getAvailableRooms(req.body.checkInDate, req.body.checkOutDate); 
-    res.render("booking", { availableRooms });
+    const availableRooms = await getAvailableRooms(req.body.checkInDate, req.body.checkOutDate);
+    res.render("AvailableRoom", { availableRooms });
 });
 
 module.exports = router;

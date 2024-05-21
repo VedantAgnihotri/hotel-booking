@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Available Rooms</title>
 </head>
 <body class="bg-[#111827]">
     
@@ -25,9 +25,17 @@
        </div>
            <button class="lg:w-[40vw] md:w-[50vw] w-[70vw] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Check</button>
        </form>
+       
        <div class="my-5">
-           <label class="block mb-2 text-sm font-medium text-white dark:text-white">
-        </label>
+        <% if(availableRooms > 0){ %>
+           <span>Available Rooms:</span> <%=availableRooms%> <br> <br>
+           <a href="/booking" class="lg:w-[40vw] md:w-[50vw] w-[70vw] text-white bg-yellow-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Continue to booking</a>
+        <% } else if(availableRooms == 0 || availableRooms == "") {%>
+            <p class="text-[#cc3300]">No rooms available.</p>
+        <% } else {  %>
+            <p></p>
+        <% } %>
+            
        </div>
 
    </div></main></center>
